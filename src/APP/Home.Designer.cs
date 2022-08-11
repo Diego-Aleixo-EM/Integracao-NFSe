@@ -31,6 +31,7 @@
             this.pnlRoot = new System.Windows.Forms.Panel();
             this.pnlConteudoXml = new System.Windows.Forms.Panel();
             this.txtRConteudoXml = new System.Windows.Forms.RichTextBox();
+            this.txtRResposta = new System.Windows.Forms.RichTextBox();
             this.pnlBotoes = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -57,16 +58,17 @@
             this.pnlRoot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRoot.Location = new System.Drawing.Point(0, 0);
             this.pnlRoot.Name = "pnlRoot";
-            this.pnlRoot.Size = new System.Drawing.Size(384, 561);
+            this.pnlRoot.Size = new System.Drawing.Size(384, 761);
             this.pnlRoot.TabIndex = 0;
             // 
             // pnlConteudoXml
             // 
             this.pnlConteudoXml.Controls.Add(this.txtRConteudoXml);
+            this.pnlConteudoXml.Controls.Add(this.txtRResposta);
             this.pnlConteudoXml.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConteudoXml.Location = new System.Drawing.Point(0, 133);
             this.pnlConteudoXml.Name = "pnlConteudoXml";
-            this.pnlConteudoXml.Size = new System.Drawing.Size(384, 362);
+            this.pnlConteudoXml.Size = new System.Drawing.Size(384, 562);
             this.pnlConteudoXml.TabIndex = 1;
             // 
             // txtRConteudoXml
@@ -74,16 +76,25 @@
             this.txtRConteudoXml.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtRConteudoXml.Location = new System.Drawing.Point(0, 0);
             this.txtRConteudoXml.Name = "txtRConteudoXml";
-            this.txtRConteudoXml.Size = new System.Drawing.Size(384, 362);
+            this.txtRConteudoXml.Size = new System.Drawing.Size(384, 277);
             this.txtRConteudoXml.TabIndex = 0;
-            this.txtRConteudoXml.Text = "";
+            this.txtRConteudoXml.Text = "Xml Envio";
+            // 
+            // txtRResposta
+            // 
+            this.txtRResposta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtRResposta.Location = new System.Drawing.Point(0, 277);
+            this.txtRResposta.Name = "txtRResposta";
+            this.txtRResposta.Size = new System.Drawing.Size(384, 285);
+            this.txtRResposta.TabIndex = 1;
+            this.txtRResposta.Text = "Xml Resposta";
             // 
             // pnlBotoes
             // 
             this.pnlBotoes.Controls.Add(this.btnFechar);
             this.pnlBotoes.Controls.Add(this.btnEnviar);
             this.pnlBotoes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBotoes.Location = new System.Drawing.Point(0, 495);
+            this.pnlBotoes.Location = new System.Drawing.Point(0, 695);
             this.pnlBotoes.Name = "pnlBotoes";
             this.pnlBotoes.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.pnlBotoes.Size = new System.Drawing.Size(384, 66);
@@ -109,6 +120,7 @@
             this.btnEnviar.TabIndex = 7;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // lblXml
             // 
@@ -198,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 561);
+            this.ClientSize = new System.Drawing.Size(384, 761);
             this.Controls.Add(this.pnlRoot);
             this.Name = "Home";
             this.Text = "Home";
@@ -228,5 +240,6 @@
         private Panel pnlBotoes;
         private Button btnFechar;
         private Button btnEnviar;
+        private RichTextBox txtRResposta;
     }
 }
